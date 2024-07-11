@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Sayfası</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/blogSayfasi.css" />
+    <script src="assets/js/blogSayfasi.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="blogHeader" >
+        <h1>Blog Ekleme Sayfası</h1>
+        <button id="addBlogBtn">Ekle</button>
+      </header>
+      <div class="blogPageArray" id="blogContainer"></div>
+
+
+      <dialog id="modal">
+        <h2 class="modelAddNew">Blog Ekle</h2>
+        <h2 class="modelEdit"></h2>
+      <form  method="dialog" autocomplete="off" id="blogForm">
+        <label for="tittle">Başlık</label><input type="text" name="title" />
+        <label for="content">İçerik</label><textarea name="content"></textarea>
+        <label for="about">Yazar Bilgileri:</label><input type="text" name="about" />
+        <label for="category">Kategori Seçiniz</label>
+        <select name="category" id="category">
+          <option value="Moda"><h3>Moda Blogu</h3></option>
+          <option value="Kitap"><h3>Kitap İnceleme Blogu</h3></option>
+          <option value="Yemek"><h3>Yemek Blogu</h3></option>
+          <option value="Seyahat"><h3>Seyahat Blogu</h3></option>
+          <option value="Teknoloji"><h3>Teknoloji Blogu</h3></option>
+        </select>
+        <label for="img">Görsel</label><input type="text" name="img" />
+
+        <button class="modelAddNew">Ekle</button> 
+        <button  class="modelEdit">Düzenle</button>
+        <button type="button" onclick="blogForm.reset();modal.close();">Vazgeç</button>
+        <input type="hidden" name="id" value="">
+      </form>
+    </dialog>
+
+
+
+
+
+
+
+      <!-- <div class="blogList">
+        <h1>Moda Bloğu</h1>
+        <div class="moda"></div>
+        <h1>Kitap Bloğu</h1>
+        <div class="book"></div>
+        <h1>Yemek Bloğu</h1>
+        <div class="food"></div>
+        <h1>Seyahat Bloğu</h1>
+        <div class="travel"></div>
+        <h1>Teknoloji Bloğu</h1>
+        <div class="technology"></div>
+      </div> -->
+    </div>
+  </body>
+</html>
